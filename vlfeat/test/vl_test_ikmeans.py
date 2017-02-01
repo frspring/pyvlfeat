@@ -18,10 +18,10 @@ def plot_partition(data, datat, C, A, AT):
 
 def vl_test_ikmeans():
 	# VL_TEST_IKMEANS Test VL_IKMEANS function
-	print 'test_ikmeans: Testing VL_IKMEANS and IKMEANSPUSH'
+	print('test_ikmeans: Testing VL_IKMEANS and IKMEANSPUSH')
 
 	# -----------------------------------------------------------------------
-	print 'test_ikmeans: Testing Lloyd algorithm'
+	print('test_ikmeans: Testing Lloyd algorithm')
 	
 	K       = 5
 	data    = numpy.array(numpy.random.rand(2,1000) * 255, 'uint8')
@@ -33,7 +33,7 @@ def vl_test_ikmeans():
 	pylab.title('vl_ikmeans (Lloyd algorithm)')
 	pylab.xlim(0, 255)
 	pylab.ylim(0, 255)
-	print 'ikmeans_lloyd'
+	print('ikmeans_lloyd')
 	
 	pylab.figure()
 	[C, A] = vlfeat.vl_ikmeans(data, K, verbose=1, method='elkan')
@@ -42,7 +42,7 @@ def vl_test_ikmeans():
 	plot_partition(data, datat, C, A, AT) 
 	pylab.xlim(0, 255)
 	pylab.ylim(0, 255)
-	print 'ikmeans_elkan'
+	print('ikmeans_elkan')
 	
 	pylab.show()	
 

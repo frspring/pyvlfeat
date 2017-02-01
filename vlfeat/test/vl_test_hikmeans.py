@@ -44,9 +44,9 @@ def plottree(tree, linewidth=2):
 	
 	for sub in tree.sub:	
 		[x1p, x2p] = xplot(tree.get_centers()[:, i], sub)
-	  	x1 += x1p
-	  	x2 += x2p
-	  	i += 1
+		x1 += x1p
+		x2 += x2p
+		i += 1
 	
 	for i in range(len(x1)):
 		pylab.plot(x1[i], x2[i], '+-b', linewidth=linewidth)
